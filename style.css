@@ -1,32 +1,91 @@
 
 
 /* Import IBM Plex Mono font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,200;1,400;1,700&display=swap');
 
 /* General Reset */
+/* General Reset */
 body {
+    background: 
+        linear-gradient(180deg, rgba(245, 245, 220, 0.5), rgba(230, 221, 196, 0.5)), /* Increased transparency of gradient overlay */
+        url('assets/background.svg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps the background static when scrolling */
     font-family: "IBM Plex Mono", serif;
     font-weight: 200;
-    font-style: normal;
+    margin: 0;
+    min-height: 100vh;
 }
 
 /* Header */
 header {
     text-align: center;
-    background-color: #333;
+    background: transparent; /* Make the background transparent */
     color: white;
     padding: 1em 0;
+    border-radius: 20px; /* Rounded edges for the header background */
+    position: relative;
+    max-width: 90%; /* Optional: Constrain width for a more rounded effect */
+    margin: 20px auto; /* Center header */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a soft shadow for depth */
+    backdrop-filter: blur(10px); /* Add blur effect */
+}
+
+header p {
+    font-weight: 200; /* Extra-light weight */
+    font-style: italic; /* Italic text */
+    color: #000; /* Black text */
+    margin-top: 10px; /* Add some spacing below the title */
+    font-size: 1.1em; /* Slightly larger than normal for readability */
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 3em; /* Keep the title size large */
+    font-weight: 800; /* Makes the title bold */
+    font-family: "IBM Plex Mono", serif; /* Use the same font for consistency, or change */
+    font-style: italic;  color: #000000; /* Optional: Slightly darker color to emphasize */
 }
 
 header nav a {
-    color: white;
+    color: rgb(0, 0, 0);
     margin: 0 10px;
     text-decoration: none;
+}
+
+/* Social Buttons */
+.social-buttons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.social-buttons a {
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.github-btn {
+    background-color: #333;
+    border: 1px solid white;
+}
+
+.linkedin-btn {
+    background-color: #0077b5;
+    border: 1px solid white;
+}
+
+.social-buttons a:hover {
+    background-color: white;
+    color: black;
 }
 
 /* Sections */
@@ -45,18 +104,43 @@ h2 {
 }
 
 a {
-    color: #007BFF;
+    color: #007BFF; /* Default link color */
     text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease; /* Smooth animation */
 }
 
 a:hover {
-    text-decoration: underline;
+    transform: scale(1.1); /* Enlarge slightly on hover */
+    color: #70b5ff; /* Darker blue on hover */
 }
 
 /* Footer */
 footer {
     text-align: center;
-    background-color: #f4f4f4;
-    padding: 10px;
-    margin-top: 20px;
+    background: transparent; /* Make the background transparent */
+    color: white;
+    padding: 1em 0;
+    border-radius: 20px; /* Matches the header's rounded edges */
+    position: relative;
+    max-width: 90%; /* Aligns with the header's width */
+    margin: 20px auto; /* Centers the footer */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow on top */
+    backdrop-filter: blur(10px); /* Add blur effect */
+}
+
+footer p {
+    font-weight: 200; /* Extra-light weight */
+    font-style: serif; /* Italic text */
+    color: #000; /* Black text */
+    margin-top: 10px; /* Add some spacing below the title */
+    font-size: 1.1em; /* Slightly larger than normal for readability */
+}
+
+footer h1 {
+    margin: 0;
+    font-size: 3em; /* Keep the title size large */
+    font-weight: 800; /* Makes the title bold */
+    font-family: "IBM Plex Mono", serif; /* Use the same font for consistency */
+    font-style: italic;  
+    color: #000000; /* Optional: Slightly darker color to emphasize */
 }
