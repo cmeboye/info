@@ -8,11 +8,7 @@
 /* General Reset */
 body {
     background: 
-        linear-gradient(180deg, rgba(245, 245, 220, 0.5), rgba(230, 221, 196, 0.5)), /* Increased transparency of gradient overlay */
-        url('assets/abstract-timekeeper.svg'); /* Background image */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Keeps the background static when scrolling */
+        linear-gradient(180deg, rgb(255, 255, 255), rgb(255, 253, 243)); /* Increased transparency of gradient overlay */
     font-family: "IBM Plex Mono", serif;
     font-weight: 200;
     margin: 0;
@@ -62,6 +58,14 @@ header nav a {
     right: 10px;
     display: flex;
     gap: 10px;
+}
+
+@media (max-width: 600px) {
+    .social-buttons {
+        position: static;
+        justify-content: center;
+        margin-top: 10px;
+    }
 }
 
 .social-buttons a {
