@@ -9,7 +9,7 @@
 body {
     background: 
         linear-gradient(180deg, rgba(245, 245, 220, 0.5), rgba(230, 221, 196, 0.5)), /* Increased transparency of gradient overlay */
-        url('assets/background.svg'); /* Background image */
+        url('assets/abstract-timekeeper.svg'); /* Background image */
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Keeps the background static when scrolling */
